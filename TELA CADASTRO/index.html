@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo cafe e grao sem fundo.png" type="image/x-icon">
+    <title>Cadastro - Café & Grão</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Botões de acessibilidade para ajustar a fonte e alternar o tema -->
+    <div class="barra-acessibilidade" role="group"      aria-label="Ferramentas de acessibilidade">
+        <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A-</button>
+        <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+        <button type="button" id="alternar-tema" aria-label="Ativar tema escuro" title="Alternar tema">🌙</button>
+    </div>
+
+    <div class="pagina-container">
+        <main class="conteudo-principal">
+            <div class="card-container">
+                <header class="card-header">
+                    <h2>Criar Conta</h2>
+                    <p class="card-subtitle">Preencha os dados abaixo para se cadastrar no Café & Grão.</p>
+                </header>
+
+                <form class="card-body" id="form-cadastro">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CPF">CPF</label>
+                        <input type="text" id="CPF" placeholder="XXX.XXX.XXX-XX" maxlength="14">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CEP">CEP</label>
+                        <input type="text" id="CEP" placeholder="00000-000" maxlength="9">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" placeholder="(00) 00000-0000" maxlength="15">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone Fixo</label>
+                        <input type="tel" id="telefone" placeholder="(00) 0000-0000" maxlength="14">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" placeholder="Seu Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <div class="senha-container">
+                            <input type="password" id="senha" placeholder="Sua senha">
+                            <button type="button" class="btn-toggle-senha" id="toggle-senha" aria-label="Mostrar senha">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmacao">Confirme sua senha</label>
+                        <div class="senha-container">
+                            <input type="password" id="confirmacao" placeholder="Confirme sua senha">
+                            <button type="button" class="btn-toggle-senha" id="toggle-confirmacao" aria-label="Mostrar senha">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-action">
+                        <button type="submit" class="btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <span>&copy; 2026 Café & Grão. Todos os direitos reservados.</span>
+                <span class="wireframe-tag">Wireframe V1.0</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

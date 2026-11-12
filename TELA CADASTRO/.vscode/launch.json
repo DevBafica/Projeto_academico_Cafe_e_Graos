@@ -1,0 +1,35 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "a:\\PROJETOS\\CAFÉ & GRÃO\\TELA CADASTRO\\index.html"
+        }
+    ]
+}
+
+{
+  /* Esconde mensagens no código quando a linha atual estiver selecionada (evita poluição) */
+  "errorLens.followCursor": "activeLine",
+
+  /* Atraso leve (em ms) para a mensagem aparecer enquanto você digita */
+  "errorLens.delay": 300,
+
+  /* Exibe a mensagem de erro/aviso também na barra de status inferior */
+  "errorLens.statusBarItemEnabled": true,
+
+  /* Mostra qual regra ou extensão gerou o erro (ex: ESLint, TypeScript) */
+  "errorLens.addSubAnnotations": true,
+
+  /* Oculta erros em arquivos muito grandes para não travar o editor */
+  "errorLens.disableWhenTooManyErrors": true,
+
+  /* Personalização de cores sutis e arredondadas */
+  "errorLens.scrollbarHackEnabled": true,
+  "errorLens.fontStyleItalic": true
+}

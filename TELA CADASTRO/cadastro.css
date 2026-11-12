@@ -1,0 +1,384 @@
+/* --- Paleta Oficial (Brandkit Café & Grãos) & Reset --- */
+:root {
+    --cor-marrom-cafe: #3D2417;   /* Títulos e textos principais */
+    --cor-marrom-medio: #674F41;  /* Elementos secundários e subtítulos */
+    --cor-creme: #FAF2E6;         /* Fundos principais da página */
+    --cor-bege: #EBE2D7;          /* Fundos de apoio e cards */
+    --cor-taupe: #97867A;         /* Detalhes, bordas e aplicações suaves */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-creme);
+    color: var(--cor-marrom-cafe);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* --- CONTAINER & CONTEÚDO PRINCIPAL --- */
+.pagina-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* --- CARD DO FORMULÁRIO (PADRÃO DO SISTEMA) --- */
+.card-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-bege);
+    box-shadow: 0 4px 12px rgba(61, 36, 23, 0.04);
+}
+
+/* --- CABEÇALHO DO CARD --- */
+.card-header {
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.card-header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-marrom-cafe);
+    margin-bottom: 6px;
+}
+
+.card-subtitle {
+    font-size: 0.95rem;
+    color: var(--cor-marrom-medio);
+}
+
+/* --- CORPO E CAMPOS DO FORMULÁRIO --- */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-marrom-medio);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    background-color: #FAFAF8;
+    border: 1px solid var(--cor-bege);
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    color: var(--cor-marrom-cafe);
+}
+
+.form-group input::placeholder {
+    color: var(--cor-taupe);
+    font-weight: 300;
+}
+
+/* Efeito de Foco Padrão */
+.form-group input:focus {
+    border-color: var(--cor-marrom-cafe);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(61, 36, 23, 0.08);
+}
+
+/* --- BOTÃO DE SUBMIT (PADRÃO DO SISTEMA) --- */
+.card-action {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: var(--cor-marrom-cafe);
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2A180F;
+}
+
+.btn-primary:active {
+    transform: scale(0.99);
+}
+
+/* --- ESTILOS DE SENHA (TOGGLE) --- */
+.senha-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.senha-container input {
+    padding-right: 45px; 
+}
+
+.btn-toggle-senha {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--cor-marrom-medio);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.btn-toggle-senha:hover {
+    color: var(--cor-marrom-cafe);
+}
+
+/* --- ANIMAÇÕES E ERROS --- */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+}
+
+.erro-animacao {
+    animation: shake 0.4s ease-in-out;
+}
+
+.input-erro {
+    border-color: #d93025 !important;
+    background-color: #fdf3f2 !important;
+}
+
+.mensagem-erro {
+    color: #d93025;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.btn-sucesso {
+    background-color: #2e7d32 !important;
+    pointer-events: none;
+}
+
+/* --- FOOTER --- */
+.footer {
+    border-top: 1px solid var(--cor-taupe);
+    padding: 25px 0;
+    background-color: var(--cor-creme);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--cor-marrom-medio);
+    padding: 0 20px;
+}
+
+.wireframe-tag {
+    font-family: monospace;
+}
+
+/* --- RESPONSIVO (CELULARES) --- */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 24px 16px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    
+    body {
+        background-color: var(--cor-creme);
+    }
+}
+
+
+/* --- BARRA DE ACESSIBILIDADE VERTICAL --- */
+
+/* Posiciona a barra na vertical no canto esquerdo */
+.barra-acessibilidade {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+/* Personaliza os botões de acessibilidade */
+.barra-acessibilidade button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    padding: 0;
+
+    background-color: var(--cor-marrom-cafe);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Altera a cor dos botões de acessibilidade */
+.barra-acessibilidade button:hover {
+    background-color: var(--cor-taupe);
+}
+
+/* Destaca os botões pelo teclado */
+.barra-acessibilidade button:focus-visible {
+    outline: 3px solid var(--cor-marrom-cafe);
+    outline-offset: 3px;
+}
+
+/* --- TEMA ESCURO --- */
+
+/* Define a nova paleta do modo escuro */
+body.modo-escuro {
+    --escuro-fundo: #211813;       /* Fundo geral da página */
+    --escuro-superficie: #35271F;  /* Fundo do card de cadastro */
+    --escuro-campo: #49372D;       /* Fundo dos inputs */
+    --escuro-texto: #F8EEDF;       /* Cor dos títulos e textos digitados */
+    --escuro-secundario: #E0C8B3;  /* Cor dos labels e subtítulos */
+    --escuro-destaque: #D4AD89;    /* Cor do botão e do hover */
+    --escuro-borda: #A88A73;       /* Bordas dos campos e do card */
+
+    background-color: var(--escuro-fundo);
+    color: var(--escuro-texto);
+}
+
+/* 1. Card de Cadastro */
+.modo-escuro .card-container {
+    background-color: var(--escuro-superficie);
+    border-color: var(--escuro-borda);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Textos do Card (Títulos, Subtítulos e Labels) */
+.modo-escuro .card-header h2 {
+    color: var(--escuro-texto);
+}
+
+.modo-escuro .card-subtitle,
+.modo-escuro .form-group label {
+    color: var(--escuro-secundario);
+}
+
+/* 3. Campos de Formulário (Inputs) */
+.modo-escuro .form-group input {
+    background-color: var(--escuro-campo);
+    color: var(--escuro-texto);
+    border: 1px solid var(--escuro-borda);
+}
+
+.modo-escuro .form-group input::placeholder {
+    color: #A88A73; /* Mantém o tom da borda para não sumir */
+    opacity: 0.8;
+}
+
+.modo-escuro .form-group input:focus {
+    border-color: var(--escuro-destaque);
+    background-color: #3b2c23; /* Escurece levemente no clique para dar profundidade */
+    box-shadow: 0 0 0 3px rgba(212, 173, 137, 0.15);
+}
+
+/* 4. Botão de Mostrar Senha (Olho) */
+.modo-escuro .btn-toggle-senha {
+    color: var(--escuro-secundario);
+}
+
+.modo-escuro .btn-toggle-senha:hover {
+    color: var(--escuro-destaque);
+}
+
+/* 5. Botão Principal (Cadastrar) */
+.modo-escuro .btn-primary {
+    background-color: var(--escuro-destaque);
+    color: var(--escuro-fundo); /* Letra escura no botão claro para dar contraste */
+    font-weight: 700;
+}
+
+.modo-escuro .btn-primary:hover {
+    background-color: var(--escuro-texto);
+}
+
+/* 6. Rodapé (Footer) */
+.modo-escuro .footer {
+    background-color: var(--escuro-fundo);
+    border-top-color: var(--escuro-borda);
+}
+
+.modo-escuro .footer-content {
+    color: var(--escuro-secundario);
+}
+
+/* 7. Barra de Acessibilidade */
+.modo-escuro .barra-acessibilidade button {
+    background-color: var(--escuro-superficie);
+    color: var(--escuro-texto);
+    border: 1px solid var(--escuro-borda);
+}
+
+.modo-escuro .barra-acessibilidade button:hover {
+    background-color: var(--escuro-campo);
+    color: var(--escuro-destaque);
+}
+
+.modo-escuro button:focus-visible {
+    outline: 3px solid var(--escuro-destaque);
+    outline-offset: 3px;
+}

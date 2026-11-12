@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Café & Grão - Destaques</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <!-- Botões de acessibilidade para ajustar a fonte e alternar o tema -->
+    <div class="barra-acessibilidade" role="group"      aria-label="Ferramentas de acessibilidade">
+        <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A-</button>
+        <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+        <button type="button" id="alternar-tema" aria-label="Ativar tema escuro" title="Alternar tema">🌙</button>
+    </div>
+        
+        
+        <!-- Navbar fluida de ponta a ponta -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <div class="logo-circle">
+                    <img src="imagens/logo cafe e grao icon.png" alt="Café & Grão Logo">
+                </div>
+                <span class="brand-name">Café & Grãos</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">Início</a>
+                <a href="#" class="nav-item">Produtos</a>
+                <span class="nav-user">Eduardo</span>
+                <button class="btn-sair" onclick="sairApp()">Sair</button>
+            </nav>
+        </header>
+
+        <div class="pagina-container">
+            <main class="conteudo-principal">
+                <div class="page-header">
+                    <h1>Olá, Eduardo!</h1>
+                    <p>Seja bem-vindo ao seu painel.<br> Veja o andamento do seu perfil de <strong>Café</strong> e novidades recomendadas.</p>
+                </div>
+                
+                <div class="grid-caixas">
+                    <article class="card">
+                        <h2>Descubra seu perfil de café</h2>
+                        <p class="card-subtitle">Responda o questionário rápido e descubra as <strong>NOTAS</strong>, <strong>ACIDEZ</strong>, e <strong>MÉTODOS DE PREPAROS</strong> ideais para o seu paladar.</p>
+                        <div class="card-action">
+                            <button class="btn-primary" onclick="fazerQuiz()">Fazer o Quiz</button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h2>Minhas Preferências</h2>
+                        <p class="card-subtitle">Gerencie os dados salvos sobre seus sabores favoritos, frequência de consumo e métodos de preparo preferidos.</p>
+                        <div class="card-action">
+                            <button class="btn-primary" onclick="verPreferencias()">Ver Preferências</button>
+                        </div>
+                    </article>
+
+                    <article class="card caixa-destaque">
+                        <h2>Café em Destaque</h2>
+                        <img src="imagens/frapuccino.jpg" alt="Xícara de café com a logo da marca.">
+                        <p class="card-subtitle"><strong>Frapuccino:</strong> O nosso clássico gelado.<br>Café batido com gelo, leite e caldas especiais, coberto com uma generosa porção de chantilly e coberturas. A escolha ideal para refrescar os dias quentes.</p>
+                    </article>
+                </div>    
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <span>&copy; 2026 Café & Grão. Todos os direitos reservados.</span>
+                    <span class="wireframe-tag">Wireframe V1.0</span>
+                </div>
+            </footer>
+        </div>    
+        <script src="destaques.js"></script>   
+    </body>
+</html>

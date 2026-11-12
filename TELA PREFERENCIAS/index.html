@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Grão - Minhas Preferências</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Botões de acessibilidade para ajustar a fonte e alternar o tema -->
+    <div class="barra-acessibilidade" role="group"      aria-label="Ferramentas de acessibilidade">
+        <button type="button" id="diminuir-fonte" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A-</button>
+        <button type="button" id="aumentar-fonte" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+        <button type="button" id="alternar-tema" aria-label="Ativar tema escuro" title="Alternar tema">🌙</button>
+    </div>
+
+    <!-- NAVBAR fluida de ponta a ponta -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-circle">
+                <img src="imagens/logo cafe e grao icon.png" alt="Café & Grão Logo">
+            </div>
+            <span class="brand-name">Café & Grãos</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="nav-item active">Início</a>
+            <span class="nav-user">Eduardo</span>
+            <button class="btn-sair" onclick="sairApp()">Sair</button>
+        </nav>
+    </header>
+
+    <div class="pagina-container">
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo-principal">
+            <section class="page-header">
+                <h1>Minhas Preferências de Café</h1>
+                <p>Com base nas suas respostas do quiz, estruturamos o seu perfil sensorial perfeito.</p>
+            </section>
+
+            <div class="content-grid">
+                
+                <!-- CARD 1: RESULTADO DO QUIZ -->
+                <div class="card quiz-result-card">
+                    <div>
+                        <h2>Seu Perfil Sensorial</h2>
+                        <p class="card-subtitle">Resultado obtido através do seu último quiz de paladar.</p>
+                        
+                        <div class="profile-badge">
+                            <span class="badge-tag">Perfil Predominante</span>
+                            <h3>☕ Equilibrado & Aromático</h3>
+                        </div>
+
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Notas Sensoriais:</span>
+                                <span class="detail-value">Chocolate ao leite, caramelo e castanhas tostadas.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Acidez Ideal:</span>
+                                <span class="detail-value">Baixa a Média (suave e agradável ao paladar).</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Corpo do Café:</span>
+                                <span class="detail-value">Aveludado e Encorpado.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Método de Preparo Recomendado:</span>
+                                <span class="detail-value">Prensa Francesa e Coador V60.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+                        <button class="btn-primary" onclick="refazerQuiz()">Refazer Quiz</button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: RECOMENDAÇÕES DE CAFÉ -->
+                <div class="card recommendations-card">
+                    <div>
+                        <h2>Recomendações para Você</h2>
+                        <p class="card-subtitle">Selecionados a dedo com base no seu perfil Equilibrado.</p>
+
+                        <div class="recommendations-list">
+                            <!-- Recomendação 1 -->
+                            <div class="coffee-item">
+                                <img src="####" alt="Café Chapada Diamantina">
+                                <div class="coffee-info">
+                                    <h4>Café Chapada Diamantina Gourmet</h4>
+                                    <p class="coffee-notes">Notas de chocolate amargo, castanha e doçura natural de rapadura.</p>
+                                    <span class="coffee-match">98% Match com seu perfil</span>
+                                </div>
+                            </div>
+
+                            <!-- Recomendação 2 -->
+                            <div class="coffee-item">
+                                <img src="####" alt="Café Sul de Minas">
+                                <div class="coffee-info">
+                                    <h4>Café Reserva Sul de Minas</h4>
+                                    <p class="coffee-notes">Notas marcantes de caramelo cremoso, nozes e aroma floral delicado.</p>
+                                    <span class="coffee-match">95% Match com seu perfil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grupo de botões com espaçamento adequado -->
+                    <div class="card-actions-group">
+                        <button class="btn-primary" onclick="salvarPreferencias()">Salvar Alterações</button>
+                        <button class="btn-secondary" onclick="verProdutos()">Ver Produtos</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <span>&copy; 2026 Café & Grão. Todos os direitos reservados.</span>
+                <span class="wireframe-tag">Wireframe V1.0</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="preferencias.js"></script>
+</body>
+</html>
